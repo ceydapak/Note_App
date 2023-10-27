@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Graduation_project.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Graduation_project"
+ 
+    
+    >
+  
+
+    <ShellContent
+        ContentTemplate="{DataTemplate local:Login}"
+        Route="Login" 
+        FlyoutItemIsVisible="False"/>
+
+   
+    <FlyoutItem Title="Home">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
+        </Tab>
+
+    </FlyoutItem>
+
+    <FlyoutItem Title="Logout">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:Login}" Route="Login"  />
+        </Tab>
+
+    </FlyoutItem>
+
+
+</Shell>
